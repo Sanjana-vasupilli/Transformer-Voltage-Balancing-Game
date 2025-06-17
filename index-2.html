@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformer Voltage Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="gameWrapper">
+    <div id="gameInterface">
+      <div id="header">
+        <h1>Transformer Voltage Game</h1>
+        <div id="gameStatus">
+          <p>Voltage: <span id="voltage">1000V</span></p>
+          <p id="status">Grid Status: Running</p>
+          <p>Score: <span id="score">0</span></p>
+          <p>Time Left: <span id="timer">30</span> seconds</p>
+        </div>
+      </div>
+      <div id="gameActions">
+        <button id="stepUpButton">Place Step-Up Transformer</button>
+        <button id="stepDownButton">Place Step-Down Transformer</button>
+        <button id="pauseButton">Pause Game</button>
+      </div>
+      <div id="levelProgressWrapper">
+        <div id="levelProgressBar"></div>
+      </div>
+      <canvas id="gameCanvas" width="500" height="400"></canvas>
+
+      <div id="gameOverOverlay" class="overlay">
+        <div class="overlay-content">
+          <h2>Game Over!</h2>
+          <p id="gameOverMessage">You lost the game.</p>
+          <p>Rate your game:</p>
+          <div id="starRating">
+            <span class="star" onclick="rateGame(1)">&#9733;</span>
+            <span class="star" onclick="rateGame(2)">&#9733;</span>
+            <span class="star" onclick="rateGame(3)">&#9733;</span>
+            <span class="star" onclick="rateGame(4)">&#9733;</span>
+            <span class="star" onclick="rateGame(5)">&#9733;</span>
+          </div>
+          <button id="resumeButton">Resume</button>
+          <button id="restartButton">Start Over</button>
+          <button id="startButton">Start Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
